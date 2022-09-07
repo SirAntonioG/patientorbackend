@@ -3,7 +3,7 @@ export interface Diagnose {
   name: string;
   latin?: string;
 }
-export type NonSensitiveDiagnoseEntry = Omit<Diagnose, "latin">;
+export type NonSensitiveDiagnoseEntry = Omit<Diagnose, 'latin'>;
 
 export interface Patient {
   id: string;
@@ -13,4 +13,5 @@ export interface Patient {
   gender: string;
   occupation: string;
 }
-export type NonSensitivePatientEntry = Omit<Patient, "ssn">;
+export type NonSensitivePatientEntry = Omit<Patient, 'ssn'>;
+export type NewPatientEntry = Omit<Patient, 'id'>;
